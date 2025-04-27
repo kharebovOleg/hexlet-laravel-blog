@@ -7,7 +7,8 @@
         </ul>
     </div>
 @endif
-{{ html()->modelForm($article, 'POST', route('articles.store'))->open() }}
-    @include('article.form')
-    {{ html()->submit('Создать') }}
-{{ html()->closeModelForm() }}
+
+{{  html()->label('Имя', 'name') }}
+{{  html()->input('text', 'name') }}
+{{  html()->label('Содержание', 'body') }}
+{{  html()->textarea('body') }}
